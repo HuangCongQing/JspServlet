@@ -1,2 +1,6 @@
 # JspServlet
 Servlet是Java提供的用于开发Web服务器应用程序的一个组件，运行在服务器端，由Servlet容器所管理，用于生成动态的内容。Servlet是平台独立的Java类，编写一个Servlet，实际上就是按照Servlet规范编写一个Java类。
+
+至于JSP（JavaServlet Page）从图中可以看出，实际上它也是从Servlet继承而来。只不过它在Servlet当中又添加/修改了一些方法，作了新的封装。具体到Tomcat Web应用服务器中，它通过一个多重继承，分别从Java的HttpJspPage和HttpServlet两个类那里继承和实现一些方法，然后封装一个叫做HttpJspBase的类从而实现了一个通用化的JSP类，用户在开发自己的JSP时，只需要从HttpJspBase继承一个自己的类（如图中Hello_jsp类），然后根据需要去实现相应的方法即可。
+
+[图解JSP与Servlet的关系](http://blog.csdn.net/kaixinbingju/article/details/9409927)
